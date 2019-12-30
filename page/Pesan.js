@@ -1,6 +1,7 @@
 import React from 'react'
 import {
   View,
+  image,
   Button,
   Text,
   TextInput,
@@ -18,11 +19,10 @@ export default class Pesan extends React.Component {
     return (
       <View style={styles.container}>
         <Text onPress={console.log(this.props)} style={styles.judul}>
-          Pesan
+          Pesanku
         </Text>
-        
-         
       </View>
+
     )
   }
 }

@@ -27,7 +27,6 @@ const page = createStackNavigator({
   Login: Login_nav,
   Register: Register_nav,
   Beranda: Beranda_nav,
-
  
 },
 {

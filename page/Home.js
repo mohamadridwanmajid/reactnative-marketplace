@@ -25,7 +25,6 @@ function List({ title, harga, img }) {
             source={require('../image/shop.png')}
           />
          </TouchableOpacity>
-        
       </View>
     );
   }
@@ -168,42 +167,42 @@ export default class Home extends React.Component {
            <View style={styles.banner}>
               <Text style={styles.isiBanner}>
               </Text>
-            </View>
+           </View>
 
-            <View>
-              <FlatList
-                numColumns={2}
+           <View>
+            <FlatList
+              numColumns={2}
                 data={this.state.marketlist}
            
                 renderItem={obj => (
                   <List img={obj.item.img} title={obj.item.nama} harga={obj.item.harga}  />
                   )}
-                keyExtractor={(item, index) => index.toString()}
-              />
-            </View>
-
+              keyExtractor={(item, index) => index.toString()}
+            />
+           </View>
         </ScrollView>
+
 
 
         <View style={styles.footer}>
           <TouchableOpacity onPress={() => this.props.navigation.navigate('Home')}>
             <View>
               <Image 
-             style={styles.footerImage}
-             source={require('../image/home.png')}
-            />
-            <Text style={styles.footerText}>Home</Text>
+                style={styles.footerImage}
+                source={require('../image/home.png')}
+                />
+              <Text style={styles.footerText}>Home</Text>
             </View>
           </TouchableOpacity>
 
           <TouchableOpacity onPress={() => this.props.navigation.navigate('Favorit')}>
             <View>
-            <Image 
-           style={styles.footerImage}
-           source={require('../image/love.png')}
-          />
-          <Text style={styles.footerText}>Favorit</Text>
-          </View>
+              <Image 
+                style={styles.footerImage}
+                source={require('../image/love.png')}
+                />
+              <Text style={styles.footerText}>Favorit</Text>
+            </View>
           </TouchableOpacity>
 
           <TouchableOpacity onPress={() => this.props.navigation.navigate('Saldo')}>
@@ -248,6 +247,7 @@ const styles = StyleSheet.create({
    marginTop: 0,
    backgroundColor:'#ffffff',
   },
+
     header: {
     flexDirection:'row',
     justifyContent:'space-between',
@@ -255,6 +255,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff',
     height: 60,
   },
+
   headerText:{
     fontFamily: '',
     color:'black',
@@ -262,6 +263,7 @@ const styles = StyleSheet.create({
     paddingTop: 7,
     paddingLeft:0
   },
+
   headerImage:{
     width:20,
     height:20,
@@ -269,6 +271,7 @@ const styles = StyleSheet.create({
     margin:10,
     marginTop:20,
   },
+
   cari: {
     flexDirection: 'row',
     justifyContent: 'center',
@@ -280,6 +283,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     margin: 10,
   },
+
   srcImage:{
     padding: 10,
     margin: 5,
@@ -288,7 +292,8 @@ const styles = StyleSheet.create({
     resizeMode: 'stretch',
     alignItems: 'center',
   },
-  inputCari: {
+
+  inputCari:{
     width: 120,
     height: 50,
     margin: 7,
@@ -297,13 +302,14 @@ const styles = StyleSheet.create({
     borderRadius: 14,
     fontSize: 14,
     fontWeight: '100',
-
   },
+
   scroll:{
     flex: 1,
     marginBottom: 0,
     backgroundColor:'#AEB6BF',
   },
+
   content:{
     flexDirection:'row',
     paddingLeft:10,
@@ -314,10 +320,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff',
     height: 70,
   },
+
   isiContent:{
     color:'black',
     margin:5
   },
+
   banner:{
     flexWrap:'wrap',
     flexDirection:'column',
@@ -329,22 +337,22 @@ const styles = StyleSheet.create({
     width:350,
     height: 130,
   },
+
   isiBanner:{
     color:'black',
     fontSize: 30,
     margin:100,
     fontWeight: '100'
   },
+
   product:{
-     // flexDirection:'row',
-    // flexWrap:'wrap',
     marginTop: 10,
     backgroundColor: '#A3E4D7',
     borderBottomWidth: 0,
     borderBottomColor: 'black',
     height: 500,
-
   },
+
   isiProduct:{
     color:'black',
     fontSize: 70,
@@ -352,7 +360,7 @@ const styles = StyleSheet.create({
     fontWeight: '100'
   },
 
-  footer: {
+  footer:{
     flexDirection:'row',
     justifyContent:'space-between',
     paddingTop:7,
@@ -361,20 +369,24 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff',
     height: 50,
   },
-    footerImage:{
+
+  footerImage:{
     width:20,
     height:20,
     alignSelf:'center'
   },
+
   footerText:{
     color:'black',
     fontSize: 12
   },
+
   iconcart:{
     height: 25,
     width: 25, 
   },
-  item: {
+
+  item:{
     flex: 1,
     backgroundColor: '#ffffff',
     padding: 20,
@@ -390,20 +402,14 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.27,
     shadowRadius: 4.65,
-
     elevation: 6,
   },
-//  jdul: {
-//     fontSize: 12,
-//     fontWeight: 'bold',
-//     textDecorationLine: 'bold',
-//     textAlign: 'center',
-//   },
-  harga: {
+
+  harga:{
     fontSize: 12,
   },
 
-  thumb: {
+  thumb:{
     width: 100,
     height: 100,
   }
